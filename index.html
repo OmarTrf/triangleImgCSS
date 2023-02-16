@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+		}
+		img{
+			width: 100%;
+			height: 100%;
+		}
+		.container{
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			width: 600px;
+			gap: 10px;
+		}
+		.container .card{
+			position: relative;
+			width: 300px;
+			height: 300px;
+			overflow: hidden;
+			/*clip-path: polygon(50% 0%, 0% 100%, 100% 100%);*/
+			clip-path: polygon(50% 100%, 0 0, 100% 0);
+			margin: 0 -75px;
+		}
+		.container .card:nth-child(2){
+			clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+		}
+		.container .card img{
+			transition: .5s;
+		}
+		.container .card:hover img{
+			transform: scale(1.3);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="card">
+			<img src="img/pizza2.jpg">
+		</div>
+		<div class="card">
+			<img src="img/pizza3.jpg">
+		</div>
+		<div class="card">
+			<img src="img/pizza4.jpeg">
+		</div>
+		<div class="card">
+			<img src="img/pizza5.jpg">
+		</div>
+	</div>
+</body>
+</html>
